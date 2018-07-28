@@ -3,13 +3,17 @@
   "version": "1.0",
   "description": "Adds the missing hats DLC to Alt Right base game",
   "permissions": ["activeTab", "declarativeContent", "storage"],
-"content_scripts": [
-   {
-     "matches": ["<all_urls>"],
-     "js": ["scripts/three.js", "scripts/three-obj-loader.js", "scripts/model-element.min.js", "scripts/fedora.js"]
-   }
- ],
-  "page_action": {
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scriptloader.js", "scripts/fedora.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "scripts/*",
+    "models/*"
+  ],
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/get_started16.png",
