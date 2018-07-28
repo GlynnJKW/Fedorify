@@ -26,7 +26,8 @@ fedoraDiv.appendChild(selectorDiv);
 
 
 const fedoraImg = document.createElement("x-model");
-fedoraImg.setAttribute('src', "./../models/trilby.obj");
+const fedoraURL = chrome.extension.getURL("./../models/trilby.obj")
+fedoraImg.setAttribute('src', fedoraURL);
 //fedoraImg.src = "./../models/trilby.obj";
 fedoraDiv.appendChild(fedoraImg);
 
